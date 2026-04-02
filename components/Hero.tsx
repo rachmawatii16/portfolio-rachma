@@ -24,9 +24,9 @@ export default function Hero() {
   };
 
   return (
-    <section className="flex flex-col items-start pt-3">
+    <section className="flex flex-col pt-3">
       <div
-        className="relative bg-[#A7C7E7] rounded-2xl shadow-lg mx-auto w-full h-32 overflow-hidden"
+        className="relative bg-[#A7C7E7] rounded-2xl shadow-lg w-full h-32 overflow-hidden"
         style={{ boxShadow: "inset 0 0 35px 15px rgba(255,255,255,0.4)" }}
         onClick={handleClick}
       >

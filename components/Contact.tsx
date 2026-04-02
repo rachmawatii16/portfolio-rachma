@@ -18,7 +18,7 @@ export default function Contact() {
   const GAP = 12; 
 
   return (
-    <section className="px-6 mt-6 mb-12 flex flex-col items-center">
+    <section className="mt-6 mb-12 flex flex-col items-center">
       <p className="text-md font-semibold mb-6 text-[#2F3E34]">Feel free to reach out</p>
 
       <div className="flex flex-col items-center gap-4">

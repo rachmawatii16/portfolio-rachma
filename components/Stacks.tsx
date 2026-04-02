@@ -27,7 +27,7 @@ export default function Stacks() {
   ];
 
   return (
-    <section className="px-6 mt-6">
+    <section className="mt-6">
       <h3 className="text-lg font-semibold mb-3 text-[#2F3E34]">Stacks</h3>
       <p className="text-[#2F3E34] mb-4">Some tools I use along the way</p>
       <div className="flex items-start">

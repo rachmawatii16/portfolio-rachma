@@ -2,7 +2,7 @@ import Typewriter from "./Typewriter"
 
 export default function About() {
   return (
-    <section className="px-6 mt-6">
+    <section className="mt-6">
       <Typewriter text="Hi, Welcome to My Portfolio!" />
       <h3 className="text-lg font-semibold mb-3 text-[#2F3E34]">About Me</h3>
       <p className="text-[#2F3E34] leading-relaxed text-justify whitespace-pre-line">

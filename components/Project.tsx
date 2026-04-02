@@ -30,7 +30,7 @@ export default function Project() {
   ];
 
   return (
-    <section className="px-6 mt-6 mb-6">
+    <section className="mt-6 mb-6">
       <h3 className="text-lg font-semibold mb-3 text-[#2F3E34]">Projects</h3>
       <p className="text-[#2F3E34] mb-4">A few things I have worked on</p>
 
