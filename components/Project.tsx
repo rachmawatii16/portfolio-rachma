@@ -1,10 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function Project() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [atStart, setAtStart] = useState(true);
+  const [atEnd, setAtEnd] = useState(false);
+
+  const handleScroll = () => {
+    if (!scrollRef.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+    setAtStart(scrollLeft === 0);
+    setAtEnd(scrollLeft + clientWidth >= scrollWidth - 1);
+  };
 
   const scroll = (dir: "left" | "right") => {
     if (!scrollRef.current) return;
@@ -35,7 +44,11 @@ export default function Project() {
       <p className="text-[#2F3E34] mb-4">A few things I have worked on</p>
 
       <div className="relative">
-        <div ref={scrollRef} className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide"
+        >
           {projects.map((project) => (
             <div
               key={project.title}
@@ -68,14 +81,16 @@ export default function Project() {
         <div className="flex gap-2 justify-end mt-3">
           <button
             onClick={() => scroll("left")}
-            className="w-8 h-8 rounded-full border border-[#2F3E34] flex items-center justify-center hover:bg-[#9DC08B]/20 transition"
+            disabled={atStart}
+            className="w-8 h-8 rounded-full border border-[#2F3E34] flex items-center justify-center transition hover:bg-[#9DC08B]/20 disabled:opacity-30 disabled:cursor-not-allowed"
             style={{ cursor: "url('/logos/pointer.png') 16 16, auto" }}
           >
             <span className="text-[#2F3E34] text-sm">‹</span>
           </button>
           <button
             onClick={() => scroll("right")}
-            className="w-8 h-8 rounded-full border border-[#2F3E34] flex items-center justify-center hover:bg-[#9DC08B]/20 transition"
+            disabled={atEnd}
+            className="w-8 h-8 rounded-full border border-[#2F3E34] flex items-center justify-center transition hover:bg-[#9DC08B]/20 disabled:opacity-30 disabled:cursor-not-allowed"
             style={{ cursor: "url('/logos/pointer.png') 16 16, auto" }}
           >
             <span className="text-[#2F3E34] text-sm">›</span>
