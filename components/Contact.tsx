@@ -42,7 +42,7 @@ export default function Contact() {
               style={{ cursor: "url('/logos/pointer.png') 16 16, auto" }}
             >
               <div
-                className="bg-[#9DC08B] rounded-2xl p-4 flex items-center justify-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform"
+                className="rounded-2xl p-4 flex items-center justify-center border-2 border-[#9DC08B] hover:-translate-y-1 transition-transform"
                 style={{
                   width: CARD_SIZE,
                   height: CARD_SIZE,

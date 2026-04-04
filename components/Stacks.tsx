@@ -40,7 +40,7 @@ export default function Stacks() {
               {stack.logos.map((item) => (
                 <div
                   key={item.name}
-                  className="flex flex-row items-center gap-2 border border-[#9DC08B] rounded-lg p-2"
+                  className="flex flex-row items-center gap-2 border-2 border-[#9DC08B] rounded-lg p-2"
                 >
                   <div className="w-8 h-8 flex items-center justify-center">
                     <Image
