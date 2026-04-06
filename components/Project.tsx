@@ -11,7 +11,7 @@ export default function Project() {
     {
       title: "Cloud Cost Monitoring",
       description: "A cloud cost monitoring dashboard covering GCP and AWS spend, supported by an automated VBA for monthly reporting.",
-      link: "",
+      link: "https://medium.com/@rahmativa14",
     },
     {
       title: "The Room 19 Library Management Website",
