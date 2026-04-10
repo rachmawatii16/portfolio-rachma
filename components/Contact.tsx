@@ -11,7 +11,7 @@ export default function Contact() {
     { name: "GitHub", logo: "/logos/github.svg", link: "https://github.com/rachmawatii16" },
     { name: "LinkedIn", logo: "/logos/linkedin.svg", link: "https://www.linkedin.com/in/rachmawati-20b214216/" },
     { name: "Email", logo: "/logos/gmail.svg", link: "mailto:rahmativa14@gmail.com" },
-    { name: "CV", logo: "/logos/cv.svg", link: "/cv.pdf" },
+    { name: "CV", logo: "/logos/cv.svg", link: "/CV Rachmawati.pdf" },
   ];
 
   const CARD_SIZE = 64;
